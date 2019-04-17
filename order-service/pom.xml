@@ -5,7 +5,7 @@
 
 	<groupId>com.kedacom</groupId>
 	<artifactId>order-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>order-service</name>
@@ -62,7 +62,7 @@
 		<dependency>
 			<artifactId>commons</artifactId>
 			<groupId>com.kedacom</groupId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

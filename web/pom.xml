@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <groupId>com.kedacom</groupId>
     <artifactId>web</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
 
@@ -50,19 +50,19 @@
         <dependency>
             <artifactId>user-service</artifactId>
             <groupId>com.kedacom</groupId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <artifactId>order-service</artifactId>
             <groupId>com.kedacom</groupId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <artifactId>category-service</artifactId>
             <groupId>com.kedacom</groupId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -78,13 +78,14 @@
         <dependency>
             <artifactId>commons</artifactId>
             <groupId>com.kedacom</groupId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->
             <!--<artifactId>spring-boot-starter-redis</artifactId>-->
         <!--</dependency>-->
+
         <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
@@ -106,10 +107,18 @@
         </dependency>
 
         <!--Redis-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-redis</artifactId>-->
+            <!--<version></version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-redis</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <!--<version>1.5.10.RELEASE</version>-->
         </dependency>
+
     </dependencies>
 
     <dependencyManagement>
