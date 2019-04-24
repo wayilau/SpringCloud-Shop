@@ -88,7 +88,7 @@
 	<script type="application/javascript">
 		$('#btn_submit').click(function(){
             if(checkUser()){
-                var path_name='/web/tokens/login';
+                var path_name='/users/login';
                 var name = document.getElementById("name").value;
                 var password = document.getElementById("password").value;
                 // $('<form action="'+path_name+'" method="post" target = "_blank" style="display:none" >' +
@@ -99,9 +99,9 @@
                 $.post(path_name,{name:name,password:password},function(result){
                     if(result.code==0){
                         if(confirm("登录成功,跳转到首页?")){
-                            window.location.href="http://localhost:8080/web?token="+result.data.token;
+                            self.location.href="http://localhost:8771";
 						}else{
-                            // alert("登录成功")
+                            alert("登录成功");
 						}
 					}else{
                         alert(result.msg)

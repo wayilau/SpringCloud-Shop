@@ -6,14 +6,17 @@ import com.kedacom.commons.util.ResultUtil;
 import com.kedacom.keda.service.CategoryService;
 import com.kedacom.keda.service.UserService;
 import com.kedacom.user.model.User;
+import org.bouncycastle.math.raw.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpSessionEvent;
 import java.util.Map;
 
 /**
@@ -52,6 +55,14 @@ public class UserController{
             return ResultUtil.success();
         }
         return ResultUtil.error(2,"用户名或密码有误");
+    }
+
+    @PostMapping("/logout")
+    @ResponseBody
+    public Result logout(User user, ModelAndView modelAndView, HttpSession session) {
+        //销毁session
+        session.invalidate();
+        return ResultUtil.success();
     }
 
     @PostMapping("/register")
